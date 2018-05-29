@@ -9,6 +9,8 @@
 #
 #  This is the default configuration file shipped with fvwm.
 #
+#  Setarcos@github uses it as the base of his own configuration.
+#
 #  This config file is organized as follows:
 #
 #    1: Functions
@@ -138,6 +140,13 @@ AddToFunc   ChangeDesk
 + I SendToModule FvwmButtons ChangeButton desk2 Colorset 10
 + I SendToModule FvwmButtons ChangeButton desk3 Colorset 10
 + I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
+
+DestroyFunc SelectWindow
+AddToFunc SelectWindow
++ I Focus
++ I Iconify false
++ I Raise
++ I WarpToWindow 50 8p
 
 
 #############
@@ -457,7 +466,7 @@ AddToMenu   MenuFvwmManPages "Help" Title
 # Silent supresses any errors (such as keyboards with no Menu key).
 Silent Key F1 A M Menu MenuFvwmRoot
 Silent Key Menu A A Menu MenuFvwmRoot
-Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
+Silent Key Tab A M Next (AcceptsFocus, CurrentPage) SelectWindow
 Silent Key F1 A C GotoDesk 0 0
 Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
