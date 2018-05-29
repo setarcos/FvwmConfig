@@ -148,6 +148,16 @@ AddToFunc SelectWindow
 + I Raise
 + I WarpToWindow 50 8p
 
+DestroyFunc QuickResize
+AddToFunc QuickResize
++ I WarpToWindow 100 100
++ I Resize
+
+DestroyFunc Move-or-Raise
+AddToFunc Move-or-Raise
++ I Raise
++ M Move
+
 
 #############
 # 2: Styles #
@@ -490,7 +500,8 @@ Mouse 1 4 A Maximize 100 100
 Mouse 2 4 A Maximize 0 100
 Mouse 3 4 A Maximize 100 0
 Mouse 1 6 A Iconify
-# Mouse 1 W M Move-or-Raise
+Mouse 1 W M Move-or-Raise
+Mouse 3 W M QuickResize
 
 #   TitleBar: Click to Raise, Move, Double Click to Maximize
 #             Mouse Wheel Up/Down to WindowShade On/Off
