@@ -580,7 +580,7 @@ DestroyModuleConfig FvwmBanner:*
 #   - Quit - This is a popup that asks for quit confirmation before
 #     quitting fvwm.
 DestroyModuleConfig FvwmScript:*
-*FvwmScript: DefaultColorset 15
+*FvwmScript: DefaultColorset 10
 
 # FvwmButtons - RightPanel
 #
@@ -591,18 +591,18 @@ DestroyModuleConfig FvwmScript:*
 #
 # Note - To use the system tray you must have "stalonetray" installed.
 DestroyModuleConfig RightPanel:*
-*RightPanel: Geometry 120x205-0+0
+*RightPanel: Geometry 120x180-0+0
 *RightPanel: Colorset 15
 #*RightPanel: Rows $[vp.height]
-*RightPanel: Rows 225
+*RightPanel: Rows 180
 *RightPanel: Columns 120
 *RightPanel: Frame 0
 *RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
 #*RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
-*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-MyDateTime',\
-    Frame 0)
- Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config ".stalonetrayrc"', Frame 0)
+*RightPanel: (120x5, Frame 0)
+*RightPanel: (120x40, Swallow DateTime 'Module FvwmScript FvwmScript-MyDateTime', Frame 0)
+*RightPanel: (120x20, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config ~/.fvwm/.stalonetrayrc', Frame 0)
 *RightPanel: (10x20, Frame 0)
 *RightPanel: (25x20, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
 *RightPanel: (25x20, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
@@ -610,13 +610,12 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: (25x20, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
 *RightPanel: (10x20, Frame 0)
 *RightPanel: (5x80, Frame 0)
-*RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
+*RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 1)
 *RightPanel: (5x80, Frame 0)
 #Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-225)), \
 #    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
 #Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-205)),\
 #    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
-*RightPanel: (120x5, Frame 0)
 
 # FvwmPager
 #

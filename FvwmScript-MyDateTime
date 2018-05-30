@@ -2,6 +2,8 @@ WindowTitle {DateTime}
 WindowSize  120 35
 Font "xft:Sans:style=Bold:size=10" 
 
+Colorset 15
+
 Init
  Begin
   Set $Time = (GetOutput {exec date "+%H:%M:%S"} 1 -1)
