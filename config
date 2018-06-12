@@ -238,6 +238,7 @@ Style RightPanel !Title, !Borders, !Handles, Sticky, \
                  WindowListSkip, NeverFocus, StaysOnBottom
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
+Style xpad !Title, !Borders, Sticky, StaysOnTop, WindowListSkip
 #Style FvwmPager ParentalRelativity
 
 #######
@@ -304,6 +305,7 @@ Test (x xemacs) + "XEmacs" Exec exec xemacs
 Test (x gimp) + "Gimp" Exec exec gimp
 Test (x vlc) + "VLC" Exec exec vlc
 Test (x soffice) + "LibreOffice" Exec exec soffice
++ "Evince" Exec exec evince
 + "XDG &Menu%icons/apps.png%" Popup XDGMenu
 + "&XTerm%icons/terminal.png%" Exec exec $[infostore.terminal]
 + "" Nop
