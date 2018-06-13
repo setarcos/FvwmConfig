@@ -239,6 +239,7 @@ Style RightPanel !Title, !Borders, !Handles, Sticky, \
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
 Style xpad !Title, !Borders, Sticky, StaysOnTop, WindowListSkip
+Style Chromium !Title
 #Style FvwmPager ParentalRelativity
 
 #######
