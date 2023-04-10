@@ -471,7 +471,7 @@ Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
 Silent Key T A 4 Exec exec $[infostore.terminal]
-Silent Key F A 4 Exec exec firefox
+Silent Key F A 4 Exec exec chromium
 
 Silent Key K A 4 GotoPage 0p -1p
 Silent Key J A 4 GotoPage 0p 1p
